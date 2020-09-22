@@ -63,6 +63,12 @@ export const BtnViewPost = styled(Link)`
   color: #fff;
   position: relative;
   margin-bottom: 10px;
+  transition: ease-in-out .2s;
+
+  &:active {
+    background: #1E90FF;
+  }
+  
 
   @media (min-width: 425px) {
     margin-right: 15px;
@@ -82,6 +88,11 @@ export const BtnDeletePost = styled.button`
   border-radius: 3px;
   background: red;
   color: #fff;
+  transition: ease-in-out .2s;
+
+  &:active {
+    background: #B22222;
+  }
 `;
 
 export const TextMessage = styled.div`

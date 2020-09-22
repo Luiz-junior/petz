@@ -60,4 +60,9 @@ export const BackBtn = styled(Link)`
   position: relative;
   top: 35px;
   text-decoration: none;
+  transition: ease-in-out .2s;
+
+  &:active {
+    background: #1E90FF;
+  }
 `;
