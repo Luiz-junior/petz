@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { getPostById } from '../../store/actions/postsAction';
+import { Loading } from '../../components/ListPosts/styles';
 import {
   PostDetailsContainer,
   PostContent,
@@ -28,7 +29,7 @@ function PostDetails() {
   }, []);
 
   if (loading)
-    return <strong className="loading"> Carregando... </strong>;
+    return <Loading><strong className="loadingText"> Carregando... </strong></Loading>;
 
   return (
     <PostDetailsContainer>

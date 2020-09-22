@@ -8,14 +8,6 @@ export const PostsContainer = styled.div`
   margin: 0 auto;
   margin-top: 15px;
   position: relative;
-
-  .loading {
-    position: absolute; 
-    top: 130px;
-    left: 0;
-    right: 0;
-    color: #01579b;
-  }
 `
 export const SearchPost = styled.input`
   height: 30px;
@@ -100,4 +92,16 @@ export const TextMessage = styled.div`
   visibility: ${props => props.visibility};
   opacity: ${props => props.opacity};
   transition: visibility 0.2s, opacity 0.5s linear;
+`;
+
+export const Loading = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .loadingText {
+    color: #01579b;
+    position: relative;
+    top: 15px;
+  }
 `;

@@ -2,7 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { AiOutlineSearch, AiFillDelete } from 'react-icons/ai';
 
-import { PostsContainer, SearchPost, Table, BtnViewPost, BtnDeletePost, TextMessage } from "./styles";
+import {
+  PostsContainer,
+  SearchPost,
+  Table,
+  BtnViewPost,
+  BtnDeletePost,
+  TextMessage,
+  Loading
+} from "./styles";
 import { getPosts, getPostListId, deletePosts } from "../../store/actions/postsAction";
 
 function ListPosts() {
@@ -38,7 +46,7 @@ function ListPosts() {
   };
 
   if (loading)
-    return <strong className="loading"> Carregando... </strong>;
+    return <Loading><strong className="loadingText"> Carregando... </strong></Loading>;
 
   return (
     <PostsContainer>
